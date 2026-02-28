@@ -485,9 +485,8 @@ img {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
   padding: 8px 16px;
-  margin-right: 16px;
-  transition-property: border;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 24px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-input::placeholder {
   font-weight: 400;
@@ -520,20 +519,18 @@ img {
   text-align: center;
   color: #fff;
 
-  transition-property: background;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-btn:hover,
 .footer-form-btn:focus {
-  background: #31d0aa;
+  background-color: #31d0aa;
 }
 .footer-form-icon {
   fill: #fff;
 }
 /* #endregion */
 
-/* #region Modal form */
-
+/* #region Modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -546,8 +543,9 @@ img {
   visibility: hidden;
   pointer-events: none;
 
-  transition-property: opacity, visibility;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -572,8 +570,9 @@ img {
   transform: translateX(50%) translateY(70%);
   opacity: 0;
 
-  transition-property: opacity, transform;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity,
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 24px;
 }
@@ -593,12 +592,10 @@ img {
   justify-content: center;
   margin-left: auto;
   margin-bottom: 24px;
-  transition-property: border-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn-icon {
-  transition-property: fill;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -617,11 +614,13 @@ img {
   color: #2e2f42;
   margin-bottom: 16px;
 }
+/* #endregion */
+
+/* #region Contact-form */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 16px;
 }
 .contact-form-label {
   font-weight: 400;
@@ -641,8 +640,7 @@ img {
   width: 360px;
   height: 40px;
   padding: 8px 38px;
-  transition-property: border-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-input:focus {
   border-color: #4d5ae5;
@@ -657,15 +655,15 @@ img {
   top: 8px;
   left: 16px;
   pointer-events: none;
-  transition-property: fill;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-field .textarea {
+  margin-bottom: 8px;
 }
 .contact-form-input.textarea {
   height: 120px;
   resize: none;
   padding: 8px 16px;
-  display: block;
-  line-height: 14px;
 }
 .contact-form-input.textarea::placeholder {
   font-weight: 400;
@@ -682,7 +680,7 @@ img {
   color: #8e8f99;
 
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .contact-form-checkbox {
   width: 16px;
@@ -702,8 +700,9 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: #f4f4fd;
   cursor: pointer;
-  transition-property: background-color, border-color, border-radius;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-link {
   line-height: 1.33;
@@ -712,7 +711,6 @@ img {
   color: #4d5ae5;
 }
 .contact-form-checkbox:checked + .custom-checkbox {
-  border-radius: 2px;
   background-color: #404bbf;
   border: 1px solid #404bbf;
 }
@@ -745,12 +743,11 @@ img {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  transition-property: background;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-send:hover,
 .btn-send:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 /* #endregion */
